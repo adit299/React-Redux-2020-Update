@@ -1,0 +1,49 @@
+Consider the following code:
+
+class Car {
+
+	setDriveSound(sound) {
+		this.sound = sound;	
+	}
+
+	drive() {
+		return this.sound	
+	}
+
+}
+
+const car = new Car();
+car.setDriveSound('vroom');
+
+const drive = car.drive;
+drive()
+
+- calling the function drive(), will result in an error: TypeError: Cannot read sound property of 'undefined'
+
+- Recall that 'this', takes on the value of whatever's to the left of the dot. Calling drive(), could be seen as being
+equivalent to .drive, and we can see nothing is to the left of the dot, hence we are returned undefined
+
+- So, a possible solution to this issue is the following:
+
+class Car {
+
+	constructor() {
+		this.drive = this.drive.bind(this);
+	}
+
+	setDriveSound(sound) {
+		this.sound = sound;	
+	}
+
+	drive() {
+		return this.sound	
+	}
+
+}
+
+- Now, we have bound the function drive to the value of 'this', which will be the car object
+- Thus, now calling the code from above will result in 'vroom' being printed
+
+
+
+

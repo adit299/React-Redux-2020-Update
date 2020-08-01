@@ -1,0 +1,5 @@
+- Notes on Controlled vs Uncontrolled components:
+	- We essentially want our applications to mainly rely on the react code as opposed to the DOM code
+	- This is why we refactored our code to aid with this, relying on initialized values in state as opposed to
+	the DOM
+	- It also makes certain operations easier to implement than traditional HTML DOM manipulation

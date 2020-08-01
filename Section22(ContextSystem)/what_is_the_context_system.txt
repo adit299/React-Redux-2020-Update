@@ -1,0 +1,42 @@
+The Props System
+	- Gets data from a parent component to a direct child component
+
+Context System
+	- Gets data from a parent component to any nested child component
+
+
+- So, recall that with the props system we can directly pass data to a child only
+
+- The context system allows us to bypass this system, and pass data to more deeply nested components
+
+
+
+- There are two ways to get information into the context system
+	(1) Using the default value
+	(2) Using the Parent Component (provider)
+	
+
+
+
+- There are two ways to get information out of the context system (sources that use the data)
+	(1) this.context
+	(2) The Consumer
+
+
+
+An Important note about the context system:
+
+- Note that each component that is wrapped with a seperate provider tag consumes its own pipeline of information
+
+- They are mutually exclusive, so each provider tag is its own pipeline of context information
+
+
+Why Should we use the Consumer method of obtaining state as opposed to this.context?
+
+- The consumer method allows us to easily access values from multiple context objects, as opposed to state, which only
+allows us to access values from one context object
+
+
+
+
+

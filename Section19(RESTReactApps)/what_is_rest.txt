@@ -1,0 +1,34 @@
+REST (stands for Representational State Transfer), is a predefined set of rules that developers should follow
+when they follow when they create their API. One of these rules has to do with how you get a pieces of data through
+the use of reponses and requests.
+
+REST convention states that the following requests and their responses should look like the following
+
+
+Name		URL			Verb		Description
+
+Index		/<something>		GET		retrieves all values 
+
+New		/<something>/new	GET		displays form to create new value
+
+Create		/<something>		POST		adds the new <something> to database
+
+Show		/<something>/:id	GET		shows info about one particular object
+
+Edit		/<something>/:id/edit	GET		shows edit form for <something>
+
+Update		/<something>/:id	PUT		update the <something> and redirect elsewhere
+
+Destroy		/<something>/:id	DELETE		delete the <something> and redirect elsewhere	
+
+
+
+- See the push vs patch image. A common misconception is that a put request can be used when editing a particular
+entry. However, in reality, a major flaw of the put request is that it will completely edit the entry we want
+with the values we submitted
+
+- Thus, when we made a huge effort to send only the data pertaining to the edit in our put request, it causes this
+error
+
+- So, to solve this, it is better to use a "patch" request, which will edit only the entries that we send in the request
+and leave the rest of the entries alone.

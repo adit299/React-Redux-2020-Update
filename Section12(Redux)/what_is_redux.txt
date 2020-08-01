@@ -1,0 +1,138 @@
+What is redux?
+
+- Mainly, it is a state management library, and makes creating very complex applications a lot easier
+
+- It is not required to create a react app, and is NOT even explicitly designed to work with React
+
+
+The Redux Cycle
+
+(1) Action Creator -> (2) Action -> (3) Dispatch -> (4) Reducers -> (5) State
+    
+
+We simulate the steps of the Redux cycle in what occues in an insurance company in the following way:
+
+
+(1) Person Dropping -> (2) the form -> (3) form receiver -> (4) Departments -> (5) Compiled department data
+    off form
+
+
+
+Here are a few examples of action creators written in JS:
+
+// Action Creator that simulates people dropping off a form
+const createPolicy = (name, amount) => {
+  return {
+    type: 'CREATE_POLICY',
+    payload: {
+      name: name,
+      amount: amount
+    }
+  };  
+};
+
+
+const deletePolicy = (name) => {
+  return {
+    type: 'DELETE_POLICY',
+    payload: {
+      name: name
+    }
+  }
+}
+
+
+const createClaim = (name, amountOfMoneyToCollect) => {
+  return {
+    type: 'CREATE_CLAIM',
+    payload: {
+      name: name,
+      amountOfMoneyToCollection: amountOfMoneyToCollect
+    }
+  }
+}
+
+
+- Type contains what the action will be performing, while payload contains more information that is required to
+perform that specific action
+
+
+Reducers
+
+// Reducers (Deparments!)
+const claimsHistory = (oldListOfClaims = [], action) => {
+  if(action.type === 'CREATE_CLAIM') {
+    // we care about this action
+    return [...oldListOfClaims, action.payload]
+    
+  }
+  // we don't care about the action (form!!)
+  return oldListOfClaims;
+  
+};
+
+- Reducers sort the various actions into their respective "departments"
+
+- That syntax that we see in the array of [...oldListOfClaims, action.payload], the triple periods follow by
+oldListOfClaims, returns the old array, and the following action.payload allows us to add that payload to this array
+
+- Finally, we are going to add two new reducers:
+
+
+const accounting = (bagOfMoney = 100, action) => {
+  if (action.type === 'CREATE_CLAIM ') {
+    return bagOfMoney - action.payload.amountOfMoneyToCollect;
+  } else if (action.type === 'CREATE_POLICY') {
+    return bagOfMoney + action.payload.amount;
+  }
+  return bagOfMoney;
+};
+
+const policies = (listOfPolicies = [], action) => {
+  if(action.type === 'CREATE_POLICY') {
+    return [...listOfPolicies, action.payload.name];
+  } else if (action.type === 'DELETE_POLICY') {
+  // Filter essentially goes through the array and returns a new array in which all names
+  // satisfy the conditions of the callback function
+    return listOfPolicies.filter(name => name !== action.payload.name);
+  }
+  
+  return listOfPolicies;
+  
+}
+
+- Advantages to using Redux:
+
+	- Initially, it seems like quite a waste of time that we have to go through all this trouble just to
+	setup something about state
+
+	- However, now we have implemented only a select few ways for users to interact with the state, so the
+	likelihood for errors have gone down drastically 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

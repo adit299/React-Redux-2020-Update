@@ -1,0 +1,31 @@
+What is React and what is its purpose?
+
+At its core, React is a javascript library. Its ultimate purpose is to handle user interaction on HTML files,
+and "react" in some way to these interactions.
+
+
+Why was there a class in the code? 
+
+This is a JavaScript class, a feature that was added in ES-2015. A React "component" or what React is at its core,
+is a small part that can handle user interaction and "react" in some way to this. All React components are
+constructed using these classes
+
+
+What was the HTML looking stuff?
+
+It is actually a special markdown language called JSX. It has the ability to be placed within Javascript code
+and allows us to manipulate HTML using React. Think of it as an alternative to using .ejs files
+
+
+How did the screen change when the mouse move was detected?
+
+We made use of an event handler, lines of code that can detect user interaction and respond to it
+
+
+What is the difference between React and the React-Dom?
+
+The React library is in charge of knowing what a component is and how to make the components work together, as 
+many of our applications will include a substantial amount of components.
+
+The ReactDOM library takes these components and is what is in charge of actually getting the components to display
+on the DOM or the HTML. 

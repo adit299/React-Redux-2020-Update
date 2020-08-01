@@ -1,0 +1,3 @@
+Formally, props are a system for passing data from a parent component to a child component
+
+- 

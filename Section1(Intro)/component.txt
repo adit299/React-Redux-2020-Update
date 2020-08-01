@@ -1,0 +1,2 @@
+- Formally, a React component is a function or class that produces HTML to show the user (using JSX) and handles 
+feedback from the user (using Event Handlers)

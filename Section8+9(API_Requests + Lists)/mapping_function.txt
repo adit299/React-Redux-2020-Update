@@ -1,0 +1,21 @@
+const numbers = [0, 1, 2, 3, 4];
+
+let newNumbers = [];
+
+for(let i = 0; i < numbers.length; i++) {
+	newNumbers.push(numbers[i] * 10);
+}
+
+- We can emulate the exact sequence being performed by the for loop through the use of a mapping function
+as follows:
+
+numbers.map(num => num * 10)
+
+- This can create a new array, and as an added bonus does not change the array values of numbers
+
+- In the context of JSX, this can even be applied to create new elements on a page in the following way:
+
+numbers.map(num => <div>{num}</div>)
+
+- This is exactly what we will do for our ImageList component
+

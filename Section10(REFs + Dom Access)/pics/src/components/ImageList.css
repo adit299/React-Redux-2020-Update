@@ -1,0 +1,27 @@
+/* We are making use of the grid system in CSS to display the images
+returned by the API */
+
+.image-list {
+    display: grid;
+    /* Autofill signifies that we are allowing CSS to decide how many
+    columns to allocate for the images */
+    /* The minmax property means at minimum we want one column to be 250px
+    wide or at most 1fr */
+    /* fr stands for fraction and represents the fraction of the available
+    space in a grid container, 1 menaing we take up the entire grid system */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Add some space betweent the images (left-right and up-down) */
+    grid-gap: 0 10px;
+    /* Controls how tall each of the rows on the webpage should be */
+    grid-auto-rows: 10px;
+}
+
+.image-list img {
+    width: 250px;
+    grid-row-end: span 2;
+}
+
+
+
+
+

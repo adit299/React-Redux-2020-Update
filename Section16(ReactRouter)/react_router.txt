@@ -1,0 +1,6 @@
+How will our twitch clone work?
+
+- The streamer's computer will house some kind of Open Broadcaster Software (OBS), which is then sent to a Real Time
+Messaging Protocol (RTMP) server
+
+- From there, the video feed will be sent to all the viewer's browsers

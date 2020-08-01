@@ -1,0 +1,8 @@
+- These are two libraries that can be used to manage requests in React
+
+- Fetch is lower level, and requires less files, but this will result in us writing a lot of the code for the
+requests by ourselves
+
+- This is why we are gonna go with Axios for this project
+
+- 

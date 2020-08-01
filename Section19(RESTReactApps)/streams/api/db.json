@@ -1,0 +1,26 @@
+{
+  "streams": [
+    {
+      "title": "Adit's Stream",
+      "description": "Join me every Wednesday for League of Legends fun! Also, for destroying Alap's stream and making him cry.",
+      "userId": "105290067368462038126",
+      "id": 3
+    },
+    {
+      "title": "Unexpected Behaviour",
+      "description": "Something is afoot....",
+      "userId": "105290067368462038126",
+      "id": 4
+    },
+    {
+      "title": "Programmatic Navigation Test",
+      "description": "Made a patch edit request",
+      "id": 5
+    },
+    {
+      "title": "Alap's Stream",
+      "description": "Join me every Monday for Minecraft, Fortnite, and other baby fun! I require Amma however. And I will cry.",
+      "id": 6
+    }
+  ]
+}

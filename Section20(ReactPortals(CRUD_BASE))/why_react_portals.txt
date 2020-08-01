@@ -1,0 +1,16 @@
+- When we want to flash a message in front of a user (for example, to delete a stream), in the past Adobe flash
+was a good tool, but flash is going to be obsolete by the end of the year
+
+- So, we turn our attention to React Portals
+
+- Why React Portals?
+	- Creating a flashing message may seem like a trivial task which can be accomplished through the use
+	of simple CSS
+	- However, creating an overlayed message ontop of existing content, would mean adjusting the Z parameter
+	until it is overlayed. However, in an extremely complicated project, which could potentially contain
+	100s of nested components, tweaking the Z parameter for one piece of content, just doesn't seem reasonable
+	- This is where React Portals comes into play
+	- React Portals allow us to sidestep the traditional component hierarchy, and display elements as higher
+	up in the component hierarchy, so that we don't have to deal with all this annoying CSS and other 
+	component nesting related issues.
+

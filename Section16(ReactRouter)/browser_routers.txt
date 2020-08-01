@@ -1,0 +1,18 @@
+There are three different react routers which we can use:
+
+- Browser Router -> Uses everything after the TLD (.com, .net) or port as the 'path'
+  - ex. localhost:3000</pagetwo>
+
+- Hash Router -> Uses everything after a # as the 'path'
+  - ex. localhost:3000</#/pagetwo>
+
+- Memory Router -> Doesn't use the URL to track navigation
+  - localhost:3000/
+
+
+- What is the point of the different routers?
+	- In reality, using browser router causes some complications in the deployment of the app. Traditional
+	HTML servers will look for the /pagetwo route, see that there is none defined, and respond with a 404 error
+	- On the other hand, when we make this same request to a create-react-app server, the key takeaway is that
+	instead of returning a 404 error, the server responds with our index.html file, which contains bundle.js,
+	that encompasses all the code we have written. From there, we can easily identify the /pagetwo route.

@@ -1,0 +1,25 @@
+Recall, the following rules about Action Creators:
+
+(1) Action Creators must return action objects
+
+(2) Actions must have a type property
+
+(3) Actions can optionally have a 'payload'
+
+
+Once we have installed redux thunk, these rules change to the following:
+
+(1) Action creators can return action objects or can return functions
+
+(2) If an action object gets returned, it must have a type
+
+(3) If an action object gets returned, it must have a type
+
+(4) If an action object gets returned, it can optionally have a 'payload'
+
+
+The first point is the key to what is making redux-thunk possible/suitable to work with as a middleware to 
+handle our API calls
+
+- We get returned a function, which we can then at our own leisure, make the API call and continue with our action
+creator work flow

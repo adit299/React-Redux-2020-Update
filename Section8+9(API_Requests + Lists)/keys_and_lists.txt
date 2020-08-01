@@ -1,0 +1,10 @@
+Why are keys necessary?
+
+- (see the image) 
+
+- The key props help ensure that when we have a list lets say, and we want to rerender it after adding another
+list entry, we do not have to rerender the entire list from the beginning
+
+- We can identify which elements are on the dom and rendered list, and only render any new elements
+
+- keys help with distinguishing between these two

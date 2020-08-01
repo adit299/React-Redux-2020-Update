@@ -1,0 +1,45 @@
+(1) The command npm install -g create-react-app broken down, mean the following things:
+- npm: simply runs 'npm' a program whose letters officially don't mean anything, but we can think of as standing for
+node package manager. install -g, the -g flag means globally, so we can run the package from our terminal
+- finally, we listed the name of the package we were trying to install
+
+(2) Another alternate way to create a react app is to use the following command: npx create-react-app <name of project>,
+this is even the way that is listed in the React documentation. However, this npx command only works for npm packages
+beyond version 5.2, so the other way is more reliable
+
+(3) Running create-react-app, we can see that many packages are created. why is that?
+
+- Right now, I'm learning a version of JavaScript called ES5, with possibly features from ES2015, ES2016, ... ES2019
+
+- Learning the newer version of JavaScript is great, as developers we get access to many of the new features that it
+presents to us
+
+- However, depending on the version, certain features may or may not be fully supported on browsers
+
+- This is where the web technology of Babel comes into play, which allows us to convert just about any version of 
+JavaScript, to one that can be run safely on a browser of any kind
+
+- Babel consists of a large number of packages, which atleast partially explains the large number of packages present
+when we run npm install create-react-app
+
+(4) Analyzing the structure of a create-react-app:
+
+src: Stands for source, where all the source code we write will be put
+
+public: contains static files like images, HTML, that will not change
+
+node_modules: contains all the dependencies installed into the project (babel, etc.)
+
+package.json: records our project dependencies and configures our project
+
+package-lock.json: records the exact versions of the packages we have installed (a more detailed package.json)
+
+README.md: has directions for how to run the node project
+
+
+
+
+
+
+
+

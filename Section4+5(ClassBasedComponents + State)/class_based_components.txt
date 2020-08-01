@@ -1,0 +1,16 @@
+Functional Components vs Class Components
+
+- Functional components are good for simple things that we just want to render 
+
+- For more complex logic, class based components will always be better
+
+
+
+   if (this.state.errorMessage && !this.state.lat) {
+                return <div>Error: {this.state.errorMessage}</div>
+            }
+            if (!this.state.errorMessage && this.state.lat) {
+                return <div>Latitude: {this.state.lat}</div>
+            }
+            
+            return <div>Loading!</div>

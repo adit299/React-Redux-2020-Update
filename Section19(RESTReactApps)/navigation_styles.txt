@@ -1,0 +1,15 @@
+Programmatic Navigation - When a user is forcibly redirected to another page
+
+Intentional Navigation - When a user is given a choice to navigate to another page
+
+
+- The predicament we found ourselves in is that after successfully creating a stream, we want to redirect the user
+back to the list of streams
+
+- Upon first glance, the solution might seem to be just to simply redirect to the stream list, but how can we verify
+that any error didn't occur this way?
+
+- Thus, we have to utilize programmatic navigation, so that the user is redirected only if the stream is successfully
+created
+
+- *We haven't added error handling yet*

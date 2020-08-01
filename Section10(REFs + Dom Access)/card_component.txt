@@ -1,0 +1,4 @@
+- The issue we are running into is that each of the image cards need to have a certain allocated size (set through
+grid-row-end, which is very challenging to implement one image at a time)
+
+- We need some way to set the sizes of each of the image cards

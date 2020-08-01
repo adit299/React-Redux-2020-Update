@@ -1,0 +1,23 @@
+There are several rules that a reducer must follow like the following:
+
+- Must return any value besides 'undefined'
+
+- Produces 'state', or data to be used inside of your app using only previous state and the action 
+(reducers are pure)
+	- Recall, that the first time that the reducer is called, we pass to it "null" and a particular action, and
+	we are outputted a state value
+	- However, the second time that the reducer is called, we pass in the previous state and action, to output
+	another state. This process is followed always  
+
+- Must not return reach 'out of itself' to decide what value to return
+	- As the name suggests, the value outputted by a Reducer cannot be reliant on some outside source of data,
+	it can only be reliant on the previous state and action
+
+- Must not mutate its input 'state' argument
+	- A reducer cannot directly modify state. So statements like state.age = ..., are not allowed
+	- Why? The issue is that when we modify state directly, redux is not able to detect that a change has
+	been made. Thus, it will not rerender the component, and we are not able to see the change made
+	- When we actually return a new state object, redux is able to detect it and the component is actually
+	rerendered
+	- This is why we have "safe" state updates, see the image enclosed, as all of these return a new state object
+	while, and redux is able to detect that a new array is returned. Otherwise, this change will be undetectable
