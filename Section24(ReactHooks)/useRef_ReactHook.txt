@@ -1,0 +1,10 @@
+- We can use the useRef react hook to create references to particular sections of code, and control how events will interact
+with these particular sections
+
+- In our case, we had an issue with conflicting events
+
+- To fix this, we added a react hook called useRef so that we have a reference to a particular section of code, (done by 
+passing in ref={ref} with const ref = useRef(). 
+
+- Then, we chained the use of ref with useEffect() and a native browser event handler, so that if an event originated from the
+region that we specified using ref, we ignore the associated event handling

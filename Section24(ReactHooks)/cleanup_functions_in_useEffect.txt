@@ -1,0 +1,20 @@
+Consider the following useEffect Hook below:
+
+useEffect(() => {
+	console.log('Initial render or term has changed');
+
+	return () => {
+		console.log('CLEANUP');
+	};
+}, [term]);
+
+
+- When the function initially renders, the arrow function supplied to useEffect is run (aka we see the console.log('Initial render
+or term has changed);
+
+- React then keeps a handle on the return statement (the cleanup function), but does not imediately invoke it
+
+- After that, when useEffect is invoked again the cleanup function which React had a handle on from the previous render is 
+invoked, then the overall function is invoked, and React again keeps a handle on the cleanup function
+
+- This process is repeated for every invoke of the useEffect React Hook

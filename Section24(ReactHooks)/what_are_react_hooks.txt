@@ -1,0 +1,7 @@
+Hooks are a way to write reusable code, instead if more classic techniques like inheritance
+
+useState: Function that lets you use state in a functional component
+
+useEffect: Function that lets you use something like lifecycle methods in a functional component
+
+useRef: Function that lets you create a 'ref' in a function copmonent

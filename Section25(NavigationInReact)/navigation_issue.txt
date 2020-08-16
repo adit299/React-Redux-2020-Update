@@ -1,0 +1,6 @@
+- One of the issues that we ran into is that our navigation header appears to work fine, and in fact it does, but everytime
+we click on one of the navigation options, it is triggering a complete reload of our elements
+
+- We want to stop this allowing the user to navigate between the pages, but not have to do a reload each and everytime
+
+- The steps which we will follow to accomplish this are on the image saved to the folder 

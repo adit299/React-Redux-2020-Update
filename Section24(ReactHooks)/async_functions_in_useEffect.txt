@@ -1,0 +1,11 @@
+- Unfortunately, the useEffect react hook does not allow async functions to be used as the callback function within it
+
+- However for our purposes, we need to make a request to an API to obtain the data required for our App
+
+- So one possible situation is to define the asynchronous function within the useEffect react hook (a function within the arrow
+function), and call that instead
+
+- This can be done in two equivalent ways (logically, they are performing the same step, but syntatically they are a bit
+different) (see my pictures to see the two)
+
+- A final approach that could be employed is to simply use our promise syntax to deal with the response data 

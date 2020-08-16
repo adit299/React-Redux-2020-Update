@@ -1,0 +1,10 @@
+Cons of using react router for navigation
+
+- React Router has frequent breaking changes
+
+- We will learn the ideas and theory of navigation
+
+- Note that within the console of the browser, we can access something called window.location.pathname, which contains the 
+name of the path that we are currently under (so, if we were at localhost:3000/list, window.location.pathname would be '/list'
+
+- 

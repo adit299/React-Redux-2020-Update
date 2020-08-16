@@ -1,0 +1,40 @@
+- An issue that we are running into is that we want our dropdown menu to collapse when we click anywhere on the screen away
+from it
+
+- However, although this seems like a simple enough problem, it is actually quite a complex issue and gives us the opportunity
+to learn about more complex concepts
+
+- For starters, we know that we can assign an onClick event handler on a particular element, to assign what happens when that 
+element is clicked. How can we assign an onClick to any element that is not the dropdown? Is that even possible?
+
+- Recall, also that event bubbling is a thing in javascript, if we have an onClick event, this event will "bubble up" from the
+current node all the way up to its parents
+
+- ex. <form onclick="alert('form')">FORM
+  	<div onclick="alert('div')">DIV
+    	  <p onclick="alert('p')">P</p>
+  	</div>
+      </form> 
+
+- If we click on the p tag or div tag, the event will bubble up and all the alerts in the parent elements will trigger
+
+- Our solution encompasses all three of these concepts; essentially we are going to manually set an eventListener (native browser
+function, not react) to the body. Since clicking anywhere in the screen would cause the event to bubble up to the body, we can
+then accordingly set it up to collapse the dropdown
+
+- However, something interesting that we encounter with event bubbling within our application is the fact that the order in which
+event handlers were actually invoked, were not in line with how we expected the event handling to work. The native browser 
+event handler that we set, is actually the first one to be invoked (the one set on body)
+
+- After that, event bubbling takes place regularly in the React component, so the dropdown item, and then the dropdown item itself
+
+- We were encountering an issue in which clicking on an element of the dropdown does not close it. The issue has to do with this
+order of the events being invoked
+
+- The body event handler closes the dropdown, but our event handler in the dropwdown item reverses that, so we end up with the
+open dropdown, and just the order of the text changing
+
+- So overall, we have two scenarios that we want to cover using our event handling
+(1) If the click occurs within the dropdown, we don't want the body event handler to interfere and cause the dropdown to stay open
+
+(2) If the click occurs outside of the dropdown, we want the body dropdown component to interfere and close it 

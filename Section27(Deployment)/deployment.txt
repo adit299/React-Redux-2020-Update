@@ -1,0 +1,28 @@
+- create-react-app comes with a deployment bundle, a static version of our files
+which we can deploy to some deployment provider of our choice and have that as 
+a host of our content
+
+- Note that we do not need a VM of some kind for our code, because our code does not
+contain any server requests, and does not need to execute server code based on user
+input
+
+- Within our deployment target, our app would make requests, and depending on the 
+requests being made, our deployment target would respond appropriately
+
+
+Vercel deployment
+
+- sign up at vercel.com
+
+- install the vercel cli
+npm install vercel -g
+
+- run vercel in our project directory
+
+- To re-deploy, use the term vercel --prod
+
+
+Netlify Deployment
+
+- Netlify is also a good deployment option if you want the deployment to be more
+reliant on github and git repositories

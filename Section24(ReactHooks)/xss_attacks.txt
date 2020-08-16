@@ -1,0 +1,11 @@
+- One of the things that we did within our application is set up a span with a prop called "dangerouslySetInnerHTML", with which
+we pass in an object called {{ __html: result.snippet }}
+
+- This allows us to initialize the text that is sent from result.snippet into usable HTML (i.e if the text contains a span tag, 
+it will be initialized into our application)
+
+- However, this feature is very hidden in react applications. Why is that? Well, this opens up an application to many risks,
+such as something called a XSS attack (or Cross Site Scripting) attack
+
+- Hackers could submit HTML which triggers some sort of JavaScript to run, that could initialize an attack of some kind and 
+compromise the security of our application

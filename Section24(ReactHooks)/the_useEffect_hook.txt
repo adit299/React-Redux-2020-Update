@@ -1,0 +1,31 @@
+- We want the user to be able to enter a search term, and our program make an API call to the Wikipedia API and display the
+results from the user
+
+- We have two different approaches to accomplish this, we could either go the traditional route, where when the state is updated,
+immedieately we make an API call, get the results and update state with it, and display those results
+
+- On the other hand, we could make another state object, called terms which we will update with the users search query, our 
+component accordinly re-renders and we add code that detects the change in state, and we search after that
+
+- The second approach is slightly better mainly due to the fact that it is much more extendible. Let's say we wanted to implement
+a process later on that takes place slightly after the user's search query, and the state change.
+
+- That is now much more easier  
+
+The 'useEffect' Hook
+
+- Allows function components to use something like lifecycle methods
+
+- We are able to configure the hook so that it runs some code automatically in one of three scenarios:
+
+(1) When the component is rendered for the first time only
+
+(2) When component is rendered for the first time and whenever it rerenders
+
+(3) When the component is rendered for the first time and whenever it rerenders and some piece of data has changed 
+
+ // The useEffect hook can stimulate life cycle methods (see my notes // for the three situations in which is runs)
+    // If we supply an empty array as the second argument, option 1 is run
+    // No second argument means that option 2 is run
+    // Finally if we have an array with some data, we run after every rerender if
+    // data has changed since last render 

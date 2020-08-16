@@ -1,0 +1,17 @@
+- useEffect will raise a warning if we have a useEffect hook which contains state references in its body, but the array that 
+is supplied to it in the second argument, does not contain these state references
+
+- There are many complex issues which could happen as a result of this which becomes difficult to debug, so while it is not a 
+requirement, it is much smarter to have all state references within the useEffect hook be encompassed within the array
+
+- In our case, however, this leads to a bit of an ineffeciency, originally the issue was that we were referring to result.length
+within our function body, but this was not referred to in the second array argument
+
+- However, adding this to the dependency array means that we make two requests to our API as opposed to one, why? Recall, that 
+supplying an array to useEffect means that when any change is detected within the elements of the array, the function body
+of useEffect is re-invoked
+
+- So, to both resolve this warning, and prevent this ineffeciency of two function calls, we created another state item called
+debouncedTerm and refactored out Search.js component
+
+- I don't fully understand why this has resolved the issue, partially, I will explain further here once I fully get it

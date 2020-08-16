@@ -1,0 +1,11 @@
+- React Hooks allow us to implement "state" within functional based components
+
+- Using hooks we can simulate most of the processes within a class based component, within a functional
+based component
+
+
+- Also, note that just like with the classbased component counterpart, when we have a onClick event handler, whenever, it 
+is triggered the app re-renders
+
+- In this re-rendering process, within the useState function call at the top that initializes state, the default value that we
+pass in is replaced with the value that is assigned to it from the onClick function

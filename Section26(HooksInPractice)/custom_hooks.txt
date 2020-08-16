@@ -1,0 +1,33 @@
+- Best way to create reusable code in a React project (besides components)
+
+- Created by extracting hook related code out of a function component
+
+- Custom hooks always make use of at least one primitive hook internally
+
+- Each custom hook should have one purpose
+
+- Kind of an art form! (takes a lot of practice)
+
+- Data-fetching presents a great opportunity to try out custom hooks
+
+- Name is kind of misleading, essentially we are creating a function which makes use of hooks, and in effect
+makes our code more reusable
+
+
+
+
+Process for Creating Reusable (custom hooks)
+
+- Identify each line of code related to some single purpose (non-jsx)
+
+- Identify the inputs/outputs to the lines of code
+
+- Extract all the code into a seperate function, receiving the inputs as arguments, and
+returning the outputs
+
+- The best way to gage whether our hook is working is whether the following sentence makes sense:
+
+"If you give me a <I default search term I>, I will give you <O a way to search for videos O> <O a list of videos O>
+
+- The items encompassed in <I I>, each represent an input and <O O> are outputs. If this sentence makes sense, we 
+are on the right path
